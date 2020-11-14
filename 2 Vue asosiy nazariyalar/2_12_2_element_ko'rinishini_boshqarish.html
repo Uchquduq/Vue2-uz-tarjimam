@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+</head>
+
+<body>
+
+    <div id="app">
+        
+        <template v-if="isVisible">
+            <h1>Title</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ex.</h2>    
+        </template>
+
+        <template v-else>
+            <h1 style="color: red;">Title</h1>
+            <h2 style="color: blue;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, cumque.</h2>
+        </template>
+
+        <hr>
+
+        <button @click="isVisible = !isVisible">Toggle</button>
+    </div>
+
+    <script src="../vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                isVisible: false
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <h2>{{ newField }}</h2>
+        <button @click="title='Updated title'">Update title</button>
+    </div>
+
+    <hr>
+
+    <div id="app2">
+        <h1>{{ title }}</h1>
+        <button @click="updateFirstTitle">Update First <title></title></button>
+    </div>
+
+    <script src="../vue.js"></script>
+    <script>
+        var vue1 = new Vue({
+            el: '#app',
+            data: {
+                title: 'Hello I am Vue!'
+            },
+            methods: {
+                alertFast: function() {
+                    alert('I am from Vue 1')
+                }
+            }
+        })
+
+        console.log(vue1)
+
+        vue1.newField = 'Random text.'
+        new Vue({
+            el: '#app2',
+            data: {
+                title: 'Hello I am Vue2!'
+            },
+            methods: {
+                updateFirstTitle: function() {
+                    vue1.title = 'Updated Vue app2!'
+                    vue1.newField = 'New Field!'
+
+                    setTimeout(function(){
+                        vue1.alertFast()
+                    },1000)
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>

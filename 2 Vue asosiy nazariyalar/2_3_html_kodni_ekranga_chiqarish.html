@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+</head>
+<body>
+    <script src="../vue.js"></script>
+    
+    <div id="app">
+        <h1 v-html="link"></h1>
+    </div>
+
+    <script>
+
+        new Vue({
+            el: '#app',
+            data: {
+                link: '<a href="http://google.com">Google</a>'
+            }
+            
+        })
+    </script>
+</body>
+</html>

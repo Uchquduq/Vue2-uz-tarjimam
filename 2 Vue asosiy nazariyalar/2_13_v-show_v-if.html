@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1 v-show="isVisible">I am visible!</h1>
+        <h1 v-show="!isVisible">You can't see mee!</h1>
+
+        <hr>
+
+        <button @click="isVisible = !isVisible">Toggle</button>
+    </div>
+
+    <script src="../vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                isVisible: true
+            }
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 40px;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .green {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="circle" :style ="circleClasses"></div>
+        <div class="circle" :style="[circleClasses, {'width': height + 'px'}]"></div>
+
+        <hr>
+        
+        <input type="text" v-model="color">
+        <input type="text" v-model="height">
+    </div>
+
+
+    <script src="../vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                color: 'blue',
+                height: 100
+            },
+
+            computed: {
+                circleClasses: function(){
+                    return {
+                        'height': this.height + 'px',
+                        'background': this.color
+                    }
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

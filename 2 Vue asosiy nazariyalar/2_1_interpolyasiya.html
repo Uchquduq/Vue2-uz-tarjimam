@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>String: {{ name }}</h1>
+        <h1>Sum (10+60): {{ 10 + 60 }}</h1>
+        <h1>Number: {{ number }}</h1>
+        <h1>Method: {{ sayHello() }}</h1>
+        <h1>If statement: {{ isOk ? 'I am OK!' : 'I am not OK!' }}</h1>
+        <h1>Functions: {{ string.split('').reverse().join('') }}</h1>
+    </div>
+
+    <script src="../vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Vue!',
+                number: 1998,
+                isOk: true,
+                string: 'My name is Rufat'
+            },
+            methods: {
+                sayHello: function () {
+                    return 'I am function'
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

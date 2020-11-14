@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1 v-if="type === 'a'">A</h1>
+        <h1 v-else-if="type === 'b'">B</h1>
+        <h1 v-else-if="type === 'c'">C</h1>
+        <h1 v-else>No match</h1>
+
+        <hr>
+
+        <input type="text" v-model="type">
+        <button @click="isVisible = !isVisible">Submit</button>
+    </div>
+
+    <script src="../vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                type: 'a'
+            }
+        })
+    </script>
+
+</body>
+
+</html>
