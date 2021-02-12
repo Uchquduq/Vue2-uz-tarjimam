@@ -1,0 +1,19 @@
+{
+  "cars": [
+    {
+      "name": "Ferrari",
+      "year": 2010,
+      "id": 1
+    },
+    {
+      "name": "Nissan GTR",
+      "year": 2007,
+      "id": 2
+    },
+    {
+      "name": "Dodge Challenger",
+      "year": 2018,
+      "id": 3
+    }
+  ]
+}
